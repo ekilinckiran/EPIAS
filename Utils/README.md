@@ -1,0 +1,1 @@
+Bazı kullanışlı fonksiyonlar
