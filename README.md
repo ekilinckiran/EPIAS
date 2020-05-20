@@ -18,4 +18,17 @@ if status:
 else:
     print({"Hata": result})
 ```
+API'ler ile çalışırken en büyük sorun tarih/saat formatıdır. Bu nedenle 1.1.1970 tarihinden bugune kadar olan saniyeyi gösteren EPOCH saniyesini kullanmak kullanışlı bir yöntemdir. Utils altında yer alan EpiasDateTime.py modülü bu amaçla geliştirilmiştir. Modül varsayılan olarak Türkiye'nin zaman dilimi olan GMT+3 zaman diliminde sonuç almakta ve getirmektedir. 
+
+Kullanımı:
+```
+from Utils import EpiasDateTime
+
+epochTimeFromShortFormat = EpiasDateTime.toEpoch("2020-12-25T23:00") 
+epochTimeFromLongFormat = EpiasDateTime.toEpoch("2020-05-24T01:00:00.000+0300")
+
+epiasTimeToShortFormat = EpiasDateTime.toEpiasShort(1589925600) #returns "2020-05-20T01:00"
+epiasTimeToLongFormat = EpiasDateTime.toEpiasLong(1589925600) #returns "2020-05-20T01:00:00.000+0300"
+
+```
 
