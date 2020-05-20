@@ -1,5 +1,5 @@
 
-from Api.EndPoint import _EpiasApi
+from EpiasApi.EndPoint import _EpiasApi
 
 class EpiasApi(_EpiasApi):    
     """ Transparency API
