@@ -7,7 +7,7 @@ EPIAŞ Şeffaflık Platformuna API üzerinden ulaşım için statik ip adresine 
 
 Erişim yetkisi bulunan IP adreslerinden sorgu yapmak için:
 
-
+```
 from EpiasApi import market
 
 endPoint = market.EpiasApi("INSERT_EPIAS_API_KEY_HERE")
@@ -17,4 +17,5 @@ if status:
     print(result)
 else:
     print({"Hata": result})
-    
+```
+
